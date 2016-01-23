@@ -1,11 +1,11 @@
 use std::ops::Deref;
 
-mod igraph;
-mod scc;
-mod vgraph;
+pub mod igraph;
+pub mod scc;
+pub mod vgraph;
 
-pub use igraph::*;
-pub use scc::scc;
+pub use self::igraph::*;
+pub use self::scc::scc;
 
 #[derive(Debug,Default,PartialEq,Eq,Copy,Clone,Hash)]
 pub struct NodeRef(usize);
@@ -26,10 +26,10 @@ impl From<usize> for NodeRef {
 
 #[cfg(test)]
 mod test {
-    use scc;
-    use IGraph;
-    use scc::SCC;
-    use vgraph::VGraph;
+    use super::scc;
+    use super::IGraph;
+    use super::scc::SCC;
+    use super::vgraph::VGraph;
 
     #[test]
     fn do_stuff() {

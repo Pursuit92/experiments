@@ -1,5 +1,5 @@
-use igraph::IGraph;
-use NodeRef;
+use super::igraph::IGraph;
+use super::NodeRef;
 use std::collections::HashMap;
 use std::hash::Hash;
 use std::ops::{Deref, DerefMut};
@@ -54,7 +54,7 @@ impl<T> VGraph<T> where T: Eq + Hash + Clone {
             Some(nr) => nr,
             None => { return None },
         };
-        let to_r = match self.node(from) {
+        let to_r = match self.node(to) {
             Some(nr) => nr,
             None => { return None },
         };

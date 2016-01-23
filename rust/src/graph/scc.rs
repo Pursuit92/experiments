@@ -1,5 +1,5 @@
-use igraph::IGraph;
-use NodeRef;
+use super::igraph::IGraph;
+use super::NodeRef;
 
 use std::collections::HashSet;
 use std::fmt::Debug;

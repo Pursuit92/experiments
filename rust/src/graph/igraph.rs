@@ -1,6 +1,5 @@
-use NodeRef;
+use super::NodeRef;
 
-use std::ops::Deref;
 use std::collections::HashSet;
 
 #[derive(Debug,Default,PartialEq,Eq,Clone)]
